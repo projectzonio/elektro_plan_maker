@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editor elektro plánu</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Editor elektro plánu</h1>
+      <span id="status">Vyber PDF přes Import PDF.</span>
+    </div>
+    <div class="top-actions">
+      <label class="file-button">
+        Import PDF
+        <input id="importPdf" type="file" accept="application/pdf,.pdf">
+      </label>
+      <button id="saveProject" type="button">Uložit JSON</button>
+      <label class="file-button">
+        Načíst JSON
+        <input id="loadProject" type="file" accept="application/json">
+      </label>
+      <button id="exportPng" type="button">Export PNG</button>
+      <button id="exportPdf" type="button">Export PDF</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel">
+      <section>
+        <h2>Nástroje</h2>
+        <div class="tool-grid" id="toolGrid">
+          <button data-tool="select" class="active" type="button">Vybrat</button>
+          <button data-tool="socket1" type="button">Zásuvka 1f</button>
+          <button data-tool="socket3" type="button">Zásuvka 3f</button>
+          <button data-tool="switch1" type="button">Vyp. č.1</button>
+          <button data-tool="switch5" type="button">Vyp. č.5</button>
+          <button data-tool="switch6" type="button">Vyp. č.6</button>
+          <button data-tool="switch7" type="button">Vyp. č.7</button>
+          <button data-tool="light" type="button">Světlo</button>
+          <button data-tool="switchboard" type="button">Rozvaděč</button>
+          <button data-tool="mask" type="button">Bílá maska</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Okruhy</h2>
+        <div class="circuit-row">
+          <select id="circuitSelect"></select>
+          <button id="addCircuit" type="button">Přidat</button>
+        </div>
+        <label class="field">
+          Název
+          <input id="circuitName" type="text">
+        </label>
+        <label class="field">
+          Barva
+          <input id="circuitColor" type="color">
+        </label>
+        <button id="finishRoute" type="button">Ukončit trasu bodem</button>
+      </section>
+
+      <section>
+        <h2>Trasy</h2>
+        <p class="hint">Typ trasy se určí automaticky. Trasa napojená na rozvaděč je přívod, ostatní trasy jsou propoje. Lomy trasy přidávají jen vodorovnou délku, ne další svislý kabel.</p>
+      </section>
+
+      <section>
+        <h2>Materiál</h2>
+        <div class="material-grid">
+          <label class="field">
+            Měřítko: 100 px = m
+            <input id="metersPer100px" type="number" min="0.001" step="0.001">
+          </label>
+          <label class="field">
+            Kalibrace m
+            <input id="calibrationMeters" type="number" min="0.001" step="0.01" value="1">
+          </label>
+          <button id="measureScale" class="wide-button" type="button">Změřit měřítko z PDF</button>
+          <label class="field">
+            Rezerva %
+            <input id="wastePercent" type="number" min="0" step="1">
+          </label>
+          <label class="field">
+            Zásuvka m
+            <input id="socketHeightM" type="number" min="0" step="0.01">
+          </label>
+          <label class="field">
+            Vypínač m
+            <input id="switchHeightM" type="number" min="0" step="0.01">
+          </label>
+          <label class="field">
+            Světlo m
+            <input id="lightHeightM" type="number" min="0" step="0.01">
+          </label>
+          <label class="field">
+            Propoj trasa m
+            <input id="linkRouteHeightM" type="number" min="0" step="0.01">
+          </label>
+          <label class="field">
+            Přívod trasa m
+            <input id="supplyRouteHeightM" type="number" min="0" step="0.01">
+          </label>
+          <label class="field">
+            Do rozvaděče m
+            <input id="switchboardDropM" type="number" min="0" step="0.01">
+          </label>
+        </div>
+        <div id="materialSummary" class="material-summary"></div>
+      </section>
+    </aside>
+
+    <section class="workspace">
+      <div class="workspace-toolbar">
+        <div class="mode-switch" id="modeSwitch">
+          <button data-mode="edit" class="active" type="button">Vlož a manipuluj</button>
+          <button data-mode="connect" type="button">Trasy kabelů</button>
+        </div>
+        <div class="plan-edit-tools" aria-label="Úpravy">
+          <button id="rotateItem" class="icon-button" type="button" title="Otočit" aria-label="Otočit">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M21 12a9 9 0 1 1-3-6.7"/>
+              <path d="M21 3v6h-6"/>
+            </svg>
+          </button>
+          <button id="deleteItem" class="icon-button" type="button" title="Smazat" aria-label="Smazat">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M3 6h18"/>
+              <path d="M8 6V4h8v2"/>
+              <path d="M6 6l1 14h10l1-14"/>
+              <path d="M10 11v5"/>
+              <path d="M14 11v5"/>
+            </svg>
+          </button>
+          <button id="clearLocal" class="icon-button" type="button" title="Vyčistit" aria-label="Vyčistit">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M4 20h16"/>
+              <path d="M7 16l8-8 4 4-8 8H7z"/>
+              <path d="M14 9l-2-2"/>
+            </svg>
+          </button>
+          <label class="size-tool" title="Velikost značky">
+            <span id="symbolSizeValue" class="value-readout">100 %</span>
+            <input id="symbolSize" type="range" min="0.5" max="2.5" step="0.05" value="1" aria-label="Velikost značky">
+          </label>
+        </div>
+      </div>
+      <div class="canvas-scroll">
+        <canvas id="planCanvas"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="/jspdf/jspdf.umd.min.js"></script>
+  <script src="/api/plan-editor/symbols/bundle"></script>
+  <script src="./symbols/switchboard.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
