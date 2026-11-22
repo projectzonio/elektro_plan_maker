@@ -1,0 +1,19 @@
+{
+  "name": "elektro-plan-maker",
+  "version": "0.1.0",
+  "description": "Editor elektro planu: nahraj PDF pudorysu a zakresli pristroje (zasuvky, vypinace, svetla, rozvadec) a kabely.",
+  "license": "MIT",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.22.1",
+    "jspdf": "^4.2.1",
+    "pdfjs-dist": "^5.7.284"
+  }
+}

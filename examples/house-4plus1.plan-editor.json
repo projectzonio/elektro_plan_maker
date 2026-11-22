@@ -1,0 +1,605 @@
+{
+  "version": 2,
+  "defaultSymbolSize": 1,
+  "sourceName": "house-4plus1.svg",
+  "symbols": [
+    {
+      "id": "entry_motion",
+      "type": "switch-5",
+      "x": 73,
+      "y": 210,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "entry_motion (motion)",
+      "meta": {
+        "room": "entry",
+        "class": "motion"
+      }
+    },
+    {
+      "id": "entry_light",
+      "type": "light",
+      "x": 138,
+      "y": 210,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "entry_light (light)",
+      "meta": {
+        "room": "entry",
+        "class": "light"
+      }
+    },
+    {
+      "id": "hall_motion",
+      "type": "switch-5",
+      "x": 213,
+      "y": 180,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "hall_motion (motion)",
+      "meta": {
+        "room": "hall",
+        "class": "motion"
+      }
+    },
+    {
+      "id": "hall_smoke",
+      "type": "switch-6",
+      "x": 298,
+      "y": 180,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "hall_smoke (smoke)",
+      "meta": {
+        "room": "hall",
+        "class": "smoke"
+      }
+    },
+    {
+      "id": "hall_light",
+      "type": "light",
+      "x": 213,
+      "y": 240,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "hall_light (light)",
+      "meta": {
+        "room": "hall",
+        "class": "light"
+      }
+    },
+    {
+      "id": "living_motion",
+      "type": "switch-5",
+      "x": 408,
+      "y": 198,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "living_motion (motion)",
+      "meta": {
+        "room": "living",
+        "class": "motion"
+      }
+    },
+    {
+      "id": "living_light_main",
+      "type": "light",
+      "x": 543,
+      "y": 198,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "living_light_main (light)",
+      "meta": {
+        "room": "living",
+        "class": "light"
+      }
+    },
+    {
+      "id": "living_blind_south",
+      "type": "switch-1",
+      "x": 408,
+      "y": 293,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": -90,
+        "length": 28
+      },
+      "name": "living_blind_south (blind)",
+      "meta": {
+        "room": "living",
+        "class": "blind"
+      }
+    },
+    {
+      "id": "kitchen_motion",
+      "type": "switch-5",
+      "x": 650,
+      "y": 198,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "kitchen_motion (motion)",
+      "meta": {
+        "room": "kitchen",
+        "class": "motion"
+      }
+    },
+    {
+      "id": "kitchen_smoke",
+      "type": "switch-6",
+      "x": 730,
+      "y": 198,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "kitchen_smoke (smoke)",
+      "meta": {
+        "room": "kitchen",
+        "class": "smoke"
+      }
+    },
+    {
+      "id": "kitchen_light",
+      "type": "light",
+      "x": 650,
+      "y": 293,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "kitchen_light (light)",
+      "meta": {
+        "room": "kitchen",
+        "class": "light"
+      }
+    },
+    {
+      "id": "kitchen_blind_east",
+      "type": "switch-1",
+      "x": 730,
+      "y": 293,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": -90,
+        "length": 28
+      },
+      "name": "kitchen_blind_east (blind)",
+      "meta": {
+        "room": "kitchen",
+        "class": "blind"
+      }
+    },
+    {
+      "id": "bedroom_main_motion",
+      "type": "switch-5",
+      "x": 393,
+      "y": 378,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "bedroom_main_motion (motion)",
+      "meta": {
+        "room": "bedroom_main",
+        "class": "motion"
+      }
+    },
+    {
+      "id": "bedroom_main_light",
+      "type": "light",
+      "x": 498,
+      "y": 378,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "bedroom_main_light (light)",
+      "meta": {
+        "room": "bedroom_main",
+        "class": "light"
+      }
+    },
+    {
+      "id": "bedroom_main_blind",
+      "type": "switch-1",
+      "x": 393,
+      "y": 453,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": -90,
+        "length": 28
+      },
+      "name": "bedroom_main_blind (blind)",
+      "meta": {
+        "room": "bedroom_main",
+        "class": "blind"
+      }
+    },
+    {
+      "id": "bedroom_child_motion",
+      "type": "switch-5",
+      "x": 605,
+      "y": 378,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "bedroom_child_motion (motion)",
+      "meta": {
+        "room": "bedroom_child",
+        "class": "motion"
+      }
+    },
+    {
+      "id": "bedroom_child_light",
+      "type": "light",
+      "x": 715,
+      "y": 378,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "bedroom_child_light (light)",
+      "meta": {
+        "room": "bedroom_child",
+        "class": "light"
+      }
+    },
+    {
+      "id": "bedroom_child_blind",
+      "type": "switch-1",
+      "x": 605,
+      "y": 453,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": -90,
+        "length": 28
+      },
+      "name": "bedroom_child_blind (blind)",
+      "meta": {
+        "room": "bedroom_child",
+        "class": "blind"
+      }
+    },
+    {
+      "id": "office_motion",
+      "type": "switch-5",
+      "x": 80,
+      "y": 305,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "office_motion (motion)",
+      "meta": {
+        "room": "office_guest",
+        "class": "motion"
+      }
+    },
+    {
+      "id": "office_light",
+      "type": "light",
+      "x": 160,
+      "y": 305,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "office_light (light)",
+      "meta": {
+        "room": "office_guest",
+        "class": "light"
+      }
+    },
+    {
+      "id": "office_blind",
+      "type": "switch-1",
+      "x": 80,
+      "y": 375,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": -90,
+        "length": 28
+      },
+      "name": "office_blind (blind)",
+      "meta": {
+        "room": "office_guest",
+        "class": "blind"
+      }
+    },
+    {
+      "id": "garage_motion",
+      "type": "switch-5",
+      "x": 80,
+      "y": 450,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "garage_motion (motion)",
+      "meta": {
+        "room": "garage",
+        "class": "motion"
+      }
+    },
+    {
+      "id": "garage_light",
+      "type": "light",
+      "x": 160,
+      "y": 450,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "garage_light (light)",
+      "meta": {
+        "room": "garage",
+        "class": "light"
+      }
+    },
+    {
+      "id": "garage_door_sensor",
+      "type": "switch-1",
+      "x": 80,
+      "y": 530,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "garage_door_sensor (contact)",
+      "meta": {
+        "room": "garage",
+        "class": "contact"
+      }
+    },
+    {
+      "id": "garage_door_relay",
+      "type": "switch-7",
+      "x": 160,
+      "y": 530,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "garage_door_relay (relay)",
+      "meta": {
+        "room": "garage",
+        "class": "relay"
+      }
+    },
+    {
+      "id": "utility_flood_sensor",
+      "type": "switch-6",
+      "x": 235,
+      "y": 450,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "utility_flood_sensor (flood)",
+      "meta": {
+        "room": "utility",
+        "class": "flood"
+      }
+    },
+    {
+      "id": "utility_boiler_status",
+      "type": "socket-3f",
+      "x": 305,
+      "y": 450,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "utility_boiler_status (boiler)",
+      "meta": {
+        "room": "utility",
+        "class": "boiler"
+      }
+    },
+    {
+      "id": "utility_light",
+      "type": "light",
+      "x": 235,
+      "y": 530,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "utility_light (light)",
+      "meta": {
+        "room": "utility",
+        "class": "light"
+      }
+    },
+    {
+      "id": "house_weather_lux",
+      "type": "socket-1f",
+      "x": 448,
+      "y": 535,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "house_weather_lux (weatherLux)",
+      "meta": {
+        "room": "terrace",
+        "class": "weatherLux"
+      }
+    },
+    {
+      "id": "terrace_light",
+      "type": "light",
+      "x": 663,
+      "y": 535,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "terrace_light (light)",
+      "meta": {
+        "room": "terrace",
+        "class": "light"
+      }
+    },
+    {
+      "id": "garden_weather_lux",
+      "type": "socket-1f",
+      "x": 223,
+      "y": 628,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "garden_weather_lux (weatherLux)",
+      "meta": {
+        "room": "garden",
+        "class": "weatherLux"
+      }
+    },
+    {
+      "id": "garden_light",
+      "type": "light",
+      "x": 588,
+      "y": 628,
+      "rot": 0,
+      "size": 0.9,
+      "connector": {
+        "angle": 90,
+        "length": 34
+      },
+      "name": "garden_light (light)",
+      "meta": {
+        "room": "garden",
+        "class": "light"
+      }
+    },
+    {
+      "id": "garden_automation_placeholder",
+      "type": "switchboard",
+      "x": 223,
+      "y": 723,
+      "rot": 0,
+      "size": 1.35,
+      "connector": {
+        "angle": 0,
+        "length": 28
+      },
+      "name": "garden_automation_placeholder (missingGardenAutomation)",
+      "meta": {
+        "room": "garden",
+        "class": "missingGardenAutomation"
+      }
+    }
+  ],
+  "routes": [],
+  "masks": [],
+  "activeRouteKind": "link",
+  "materialSettings": {
+    "metersPer100px": 1,
+    "socketHeightM": 0.4,
+    "switchHeightM": 1.2,
+    "lightHeightM": 2.6,
+    "switchboardHeightM": 0,
+    "linkRouteHeightM": 0.5,
+    "supplyRouteHeightM": 3,
+    "switchboardDropM": 3,
+    "wastePercent": 10
+  },
+  "circuits": [
+    {
+      "id": "c_lights",
+      "name": "Lights",
+      "color": "#e6a700"
+    },
+    {
+      "id": "c_sensors",
+      "name": "Sensors",
+      "color": "#2f80ed"
+    },
+    {
+      "id": "c_blinds",
+      "name": "Blinds",
+      "color": "#7b61ff"
+    },
+    {
+      "id": "c_garden",
+      "name": "Garden automation",
+      "color": "#219653"
+    }
+  ],
+  "activeCircuitId": "c_lights"
+}

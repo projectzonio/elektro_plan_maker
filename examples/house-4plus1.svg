@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="820" viewBox="0 0 820 820">
+<rect width="100%" height="100%" fill="#f4f6f0"/>
+<style>text{font-family:Arial,sans-serif}.room{fill:#fff;stroke:#1f2933;stroke-width:3}.outdoor{fill:#dff2d8}.service{fill:#eef1f5}.label{font-size:15px;font-weight:700;fill:#1f2933}.device{stroke:#111827;stroke-width:1.5}.small{font-size:10px;fill:#475569}</style>
+<rect class="room" x="40" y="150" width="130" height="120" rx="4"/>
+<text class="label" x="48" y="172">Entry</text>
+<rect class="room" x="170" y="150" width="170" height="120" rx="4"/>
+<text class="label" x="178" y="172">Hall</text>
+<rect class="room" x="340" y="150" width="270" height="190" rx="4"/>
+<text class="label" x="348" y="172">Living room</text>
+<rect class="room" x="610" y="150" width="160" height="190" rx="4"/>
+<text class="label" x="618" y="172">Kitchen</text>
+<rect class="room" x="340" y="340" width="210" height="150" rx="4"/>
+<text class="label" x="348" y="362">Main bedroom</text>
+<rect class="room" x="550" y="340" width="220" height="150" rx="4"/>
+<text class="label" x="558" y="362">Child room</text>
+<rect class="room" x="40" y="270" width="160" height="140" rx="4"/>
+<text class="label" x="48" y="292">Office / guest room</text>
+<rect class="room" x="200" y="270" width="140" height="140" rx="4"/>
+<text class="label" x="208" y="292">Bathroom</text>
+<rect class="room service" x="200" y="410" width="140" height="160" rx="4"/>
+<text class="label" x="208" y="432">Utility room</text>
+<rect class="room service" x="40" y="410" width="160" height="160" rx="4"/>
+<text class="label" x="48" y="432">Garage</text>
+<rect class="room outdoor" x="340" y="490" width="430" height="90" rx="4"/>
+<text class="label" x="348" y="512">Terrace</text>
+<rect class="room outdoor" x="40" y="580" width="730" height="190" rx="4"/>
+<text class="label" x="48" y="602">Garden</text>
+<circle class="device" cx="73" cy="210" r="9" fill="#38bdf8"/>
+<text class="small" x="84" y="214">motion</text>
+<circle class="device" cx="213" cy="180" r="9" fill="#38bdf8"/>
+<text class="small" x="224" y="184">motion</text>
+<circle class="device" cx="408" cy="198" r="9" fill="#38bdf8"/>
+<text class="small" x="419" y="202">motion</text>
+<circle class="device" cx="650" cy="198" r="9" fill="#38bdf8"/>
+<text class="small" x="661" y="202">motion</text>
+<circle class="device" cx="393" cy="378" r="9" fill="#38bdf8"/>
+<text class="small" x="404" y="382">motion</text>
+<circle class="device" cx="605" cy="378" r="9" fill="#38bdf8"/>
+<text class="small" x="616" y="382">motion</text>
+<circle class="device" cx="80" cy="305" r="9" fill="#38bdf8"/>
+<text class="small" x="91" y="309">motion</text>
+<circle class="device" cx="80" cy="450" r="9" fill="#38bdf8"/>
+<text class="small" x="91" y="454">motion</text>
+<circle class="device" cx="235" cy="450" r="9" fill="#94a3b8"/>
+<text class="small" x="246" y="454">flood</text>
+<circle class="device" cx="305" cy="450" r="9" fill="#94a3b8"/>
+<text class="small" x="316" y="454">boiler</text>
+<circle class="device" cx="730" cy="198" r="9" fill="#ef4444"/>
+<text class="small" x="741" y="202">smoke</text>
+<circle class="device" cx="298" cy="180" r="9" fill="#ef4444"/>
+<text class="small" x="309" y="184">smoke</text>
+<circle class="device" cx="448" cy="535" r="9" fill="#22c55e"/>
+<text class="small" x="459" y="539">weatherLux</text>
+<circle class="device" cx="223" cy="628" r="9" fill="#22c55e"/>
+<text class="small" x="234" y="632">weatherLux</text>
+<circle class="device" cx="138" cy="210" r="9" fill="#fbbf24"/>
+<text class="small" x="149" y="214">light</text>
+<circle class="device" cx="213" cy="240" r="9" fill="#fbbf24"/>
+<text class="small" x="224" y="244">light</text>
+<circle class="device" cx="543" cy="198" r="9" fill="#fbbf24"/>
+<text class="small" x="554" y="202">light</text>
+<circle class="device" cx="650" cy="293" r="9" fill="#fbbf24"/>
+<text class="small" x="661" y="297">light</text>
+<circle class="device" cx="498" cy="378" r="9" fill="#fbbf24"/>
+<text class="small" x="509" y="382">light</text>
+<circle class="device" cx="715" cy="378" r="9" fill="#fbbf24"/>
+<text class="small" x="726" y="382">light</text>
+<circle class="device" cx="160" cy="305" r="9" fill="#fbbf24"/>
+<text class="small" x="171" y="309">light</text>
+<circle class="device" cx="160" cy="450" r="9" fill="#fbbf24"/>
+<text class="small" x="171" y="454">light</text>
+<circle class="device" cx="235" cy="530" r="9" fill="#fbbf24"/>
+<text class="small" x="246" y="534">light</text>
+<circle class="device" cx="663" cy="535" r="9" fill="#fbbf24"/>
+<text class="small" x="674" y="539">light</text>
+<circle class="device" cx="588" cy="628" r="9" fill="#fbbf24"/>
+<text class="small" x="599" y="632">light</text>
+<circle class="device" cx="408" cy="293" r="9" fill="#8b5cf6"/>
+<text class="small" x="419" y="297">blind</text>
+<circle class="device" cx="730" cy="293" r="9" fill="#8b5cf6"/>
+<text class="small" x="741" y="297">blind</text>
+<circle class="device" cx="393" cy="453" r="9" fill="#8b5cf6"/>
+<text class="small" x="404" y="457">blind</text>
+<circle class="device" cx="605" cy="453" r="9" fill="#8b5cf6"/>
+<text class="small" x="616" y="457">blind</text>
+<circle class="device" cx="80" cy="375" r="9" fill="#8b5cf6"/>
+<text class="small" x="91" y="379">blind</text>
+<circle class="device" cx="80" cy="530" r="9" fill="#94a3b8"/>
+<text class="small" x="91" y="534">contact</text>
+<circle class="device" cx="160" cy="530" r="9" fill="#94a3b8"/>
+<text class="small" x="171" y="534">relay</text>
+<circle class="device" cx="223" cy="723" r="13" fill="#111827"/>
+<text class="small" x="234" y="727">missingGardenAutomation</text>
+<text class="small" x="40" y="800">Generated for tools/greenhouse-plan-editor JSON import. Sandbox only.</text>
+</svg>
