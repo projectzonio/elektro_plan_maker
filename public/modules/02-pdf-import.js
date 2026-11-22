@@ -3,6 +3,17 @@ import { uid } from './01-state.js';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdfjs/pdf.worker.mjs';
 
+// The cleanup below (hard-coded masks, "Other" label scrubbing, a repaired wall line) was written for one
+// specific source PDF. It would damage any other plan, so it is off by default.
+// Open the editor with ?legacyPdfCleanup=1 to switch it back on.
+export const LEGACY_PDF_CLEANUP = (() => {
+  try {
+    return new URLSearchParams(window.location.search).get('legacyPdfCleanup') === '1';
+  } catch {
+    return false;
+  }
+})();
+
 export async function loadPdfFromUrl(url, state) {
   return loadPdfDocument(url, state);
 }
@@ -22,20 +33,22 @@ async function loadPdfDocument(source, state, sourceName = '') {
   base.height = Math.ceil(viewport.height);
   const baseCtx = base.getContext('2d', { willReadFrequently: true });
   await page.render({ canvasContext: baseCtx, viewport }).promise;
-  await removeOtherLabels(page, viewport, baseCtx, state);
-  if (base.height / base.width >= 1.25) {
-    applyPortraitOtherMasks(base, baseCtx, state);
-  } else {
-    removeRasterOtherLabels(baseCtx, state);
+  if (LEGACY_PDF_CLEANUP) {
+    await removeOtherLabels(page, viewport, baseCtx, state);
+    if (base.height / base.width >= 1.25) {
+      applyPortraitOtherMasks(base, baseCtx, state);
+    } else {
+      removeRasterOtherLabels(baseCtx, state);
+    }
+    applyKnownOtherMasks(base, baseCtx, state);
+    repairKnownWallSegments(base, baseCtx);
   }
-  applyKnownOtherMasks(base, baseCtx, state);
-  repairKnownWallSegments(base, baseCtx);
 
   state.baseCanvas = base;
   state.planWidth = base.width;
   state.planHeight = base.height;
   state.sourceName = sourceName;
-  return { width: base.width, height: base.height, sourceName };
+  return { width: base.width, height: base.height, sourceName, legacyCleanup: LEGACY_PDF_CLEANUP };
 }
 
 async function removeOtherLabels(page, viewport, targetCtx, state) {

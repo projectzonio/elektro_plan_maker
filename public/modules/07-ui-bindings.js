@@ -203,7 +203,7 @@ export function createUi({ state, renderer }) {
         renderer.fitView();
         renderer.render();
         actions.persist();
-        setStatus(`Načtena první stránka PDF ${result.sourceName} (${Math.round(result.width)} x ${Math.round(result.height)} px), štítky Other jsou překryté.`);
+        setStatus(`Načtena první stránka PDF ${result.sourceName} (${Math.round(result.width)} x ${Math.round(result.height)} px)${result.legacyCleanup ? ', štítky Other jsou překryté' : ''}.`);
       } catch (error) {
         console.error(error);
         setStatus(`PDF se nepodařilo načíst: ${error.message}`);

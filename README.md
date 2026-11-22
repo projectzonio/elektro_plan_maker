@@ -33,8 +33,13 @@ Otevři <http://localhost:5177>.
 
 Ve složce [`examples/`](examples) je plán rodinného domu 4+1 (33 přístrojů a 4 okruhy, bez zakreslených tras):
 
-- `house-4plus1.plan-editor.json` – načteš ho tlačítkem **Načíst JSON**,
-- `house-4plus1.svg` – náhled půdorysu, na kterém plán vznikl.
+- `house-4plus1.pdf` – prázdný půdorys, použij ho jako podklad,
+- `house-4plus1.plan-editor.json` – přístroje a okruhy,
+- `house-4plus1.svg` – zdroj půdorysu.
+
+Postup: nejdřív **Import PDF** (`house-4plus1.pdf`), potom **Načíst JSON** (`house-4plus1.plan-editor.json`).
+JSON samotný plátno nevykreslí, editor kreslí až nad načteným podkladem a souřadnice v JSON platí
+pro podklad velikosti 820 × 820 px.
 
 ## Nastavení
 
@@ -44,6 +49,9 @@ Ve složce [`examples/`](examples) je plán rodinného domu 4+1 (33 přístrojů
 | `PLAN_MAKER_HOST` | `127.0.0.1` | adresa, na které server poslouchá; `0.0.0.0` jen pokud ho chceš vědomě zpřístupnit v síti |
 
 Server nemá autentizaci. Nevystavuj ho do internetu.
+
+Import PDF podklad nijak neupravuje. Starší čištění psané na jeden konkrétní plán (překrývání štítků
+„Other“, pevné masky a dokreslená stěna) je vypnuté; zapneš ho adresou `http://localhost:5177/?legacyPdfCleanup=1`.
 
 ## HTTP rozhraní
 
